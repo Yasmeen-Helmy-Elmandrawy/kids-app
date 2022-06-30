@@ -1,0 +1,53 @@
+.home{
+    width: 100%;
+    height: 100vh;
+    background-color: #46d6cf;
+    position: absolute;
+    overflow: hidden;
+}
+.home .container{
+    width: 100%;
+    height: 100vh;
+    display: inline-block;
+}
+.container .image{
+    margin-top: 30px;
+    margin-left: 50px;
+    float: left;
+}
+.container .right{
+    float: right;
+}
+.right .para{
+    display: block;
+    position: relative;
+    margin-top: 35%;
+    margin-right: 50px;
+}
+.para .p1{
+    font-size: 50px;
+    font-weight: bold;
+    text-transform: uppercase;
+    color: #fff;
+    padding: 10px;
+}
+.para .p2{
+    font-size: 20px;
+    margin-top: 10px;
+    margin-left: 80px;
+}
+.right .start-btn{
+    margin-top: 40px;
+    margin-left: 200px;
+    padding: 10px 30px;
+    cursor: pointer;
+    border: 0;
+    outline: none;
+    font-size: 18px;
+    border-radius: 20px;
+}
+.right .start-btn:hover{
+    background-color: teal;
+    border-radius: 30px;
+    color: #fff;
+}

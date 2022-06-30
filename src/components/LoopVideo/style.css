@@ -1,0 +1,8 @@
+.loop-video{
+    width: 100%;
+    height: 100vh;
+}
+.loop-video .video-l{
+    margin-left: 250px;
+    margin-top: 70px;
+}

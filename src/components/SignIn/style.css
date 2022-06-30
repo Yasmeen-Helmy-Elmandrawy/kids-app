@@ -1,0 +1,92 @@
+.login{
+    width: 100%;
+    height: 100vh;
+    background-color: #46d6cf;
+    display: flex;
+    top: 80px;
+}
+.login .input-group2{
+    position: relative;
+    width: 420px;
+    height: 400px;
+    transition: .5s;
+    justify-content: center;
+    align-items: center;
+    margin-top: 120px;
+    background-color: #fff;
+    padding-left: 50px;
+    padding-right: 50px;
+    overflow: hidden;
+}
+.signin{
+    padding-top: 50px;
+}
+.label2{
+    font-weight: bold;
+    color:#777;
+}
+.input-field2{
+    width: 100%;
+    padding: 10px 0;
+    margin: 5px 0;
+    border-left: 0;
+    border-top: 0;
+    border-right: 0;
+    border-bottom: 1px solid #999;
+    outline: none;
+    background: transparent;
+    margin-bottom: 15px;
+}
+.login .input-group2 .icon-eye{
+    margin-left: 300px;
+    margin-top: -40px;
+    color: #555;
+    font-size: 18px;
+}
+.check-box{
+    margin: 30px 5px 30px 0;
+    accent-color: teal;
+}
+.input-group2 span{
+    color: #333;
+    position: absolute;
+    margin-top: 28px;
+    font-weight: 100;
+    font-size: 15px;
+}
+.input-group2 a{
+    float: right;
+    margin-top: 30px;
+    text-decoration: none;
+    color: teal;
+}
+.submit-button{
+    width: 85%;
+    padding: 10px 30px;
+    cursor: pointer;
+    display: block;
+    margin: auto;
+    background-color: teal;
+    color: #fff;
+    border: 0;
+    outline: none;
+    border-radius: 30px;
+    font-size: 20px;
+}
+.btn2{
+    margin-top: 20px;
+}
+.login .mascot-doc{
+    width: 250px;
+    height: 250px;
+    margin-top: 180px;
+    margin-left: 300px;
+}
+.input-group2 p{
+    margin-top: 25px;
+}
+.input-group2 .link{
+    margin-right: 110px;
+    margin-top: -1px;
+    color : teal;
+}

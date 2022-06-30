@@ -1,0 +1,615 @@
+.objects{
+    width: 100%;
+    height: 100vh;
+    display: flex;
+}
+.objects .bar{
+    background-color: #46d6cf;
+    color: #fff;
+    width: 270px;
+    height: 100vh;
+    position: fixed;
+    overflow-x: hidden;
+    overflow-y: scroll;
+    transition: all 0.4s;
+}
+.bar .basic{
+    margin-top: 20px;
+    margin-left: 70px;
+}
+.bar .basic img{
+    width: 130px;
+    height: 130px;
+    border-radius: 50%;
+    display: block;
+    margin-bottom: 5px;
+}
+.bar .basic a{
+    color: #fff;
+    font-size: 20px;
+    margin-right: 50px;
+    margin-bottom: 10px;
+}
+.bar .basic a:hover{
+    cursor: pointer;
+}
+.bar .sequence{
+    margin-top: 10px;
+}
+.bar .sequence img{
+    width: 130px;
+    height: 130px;
+    border-radius: 50%;
+    margin-left: 70px;
+}
+.bar .sequence a{
+    color: #fff;
+    font-size: 20px;
+    margin-left: 85px;
+}
+.bar .sequence a:hover{
+    cursor: pointer;
+}
+.bar .loop{
+    margin-top: 10px;
+}
+.bar .loop img{
+    width: 130px;
+    height: 130px;
+    border-radius: 50%;
+    margin-left: 70px;
+}
+.bar .loop a{
+    color: #fff;
+    font-size: 20px;
+    margin-left: 105px;
+}
+.bar .loop a:hover{
+    cursor: pointer;
+}
+.bar .function{
+    margin-top: 10px;
+}
+.bar .function img{
+    width: 130px;
+    height: 130px;
+    border-radius: 50%;
+    margin-left: 70px;
+}
+.bar .function a{
+    color: #fff;
+    font-size: 20px;
+    margin-left: 90px;
+}
+.bar .function a:hover{
+    cursor: pointer;
+}
+.bar .array{
+    margin-top: 10px;
+    margin-bottom: 20px;
+}
+.bar .array img{
+    width: 130px;
+    height: 130px;
+    border-radius: 50%;
+    margin-left: 70px;
+    margin-bottom: -5px;
+}
+.bar .array a{
+    color: #fff;
+    font-size: 20px;
+    margin-left: 105px;
+}
+.bar .array a:hover{
+    cursor: pointer;
+}
+.objects .sections{
+    width: calc(100% - 270px);
+    margin-left: 270px;
+    float: left;
+    position: absolute;
+}
+.objects .sections .section-basic{
+    background-color: #09EB4D;
+    height: 100vh;
+}
+.section-basic h2{
+    color: #fff;
+    font-size: 50px;
+    text-align: center;
+    font-weight: 800;
+    padding-top: 20px;
+}
+.section-basic .contents1{
+    display: flex;
+    margin-left: 150px;
+    margin-top: 40px;
+}
+.section-basic .contents1 .content-1{
+    width: 250px;
+    height: 220px;
+    background-color: #fff;
+    margin-right: 20px;
+    border-radius: 10px
+}
+.section-basic .contents1 .content-1 img{
+    width: 100%;
+    height: 160px;
+    border-radius: 10px;
+    margin-bottom: 15px;
+}
+.section-basic .contents1 .content-1 a{
+    font-size: 18px;
+    font-weight: 600;
+    text-decoration: none;
+    color: #000;
+}
+.section-basic .contents1 .content-1 a:hover{
+    cursor: pointer;
+    color: teal;
+}
+.section-basic .contents2{
+    display: flex;
+    margin-left: 150px;
+    margin-top: 40px;
+}
+.section-basic .contents2 .content-2{
+    width: 250px;
+    height: 220px;
+    background-color: #fff;
+    margin-right: 20px;
+    border-radius: 10px
+}
+.section-basic .contents2 .content-2 img{
+    width: 100%;
+    height: 180px;
+    border-radius: 10px;
+    margin-bottom: 5px;
+}
+.section-basic .contents2 .content-2 a{
+    margin-left: 20px;
+    font-size: 18px;
+    font-weight: 600;
+    text-decoration: none;
+    color: #000;
+}
+.section-basic .contents2 .content-2 a:hover{
+    cursor: pointer;
+    color: teal;
+}
+.section-basic .contents3{
+    display: flex;
+    margin-left: 500px;
+    margin-top: -440px;
+}
+.section-basic .contents3 .content-3{
+    width: 300px;
+    height: 380px;
+    background-color: #fff;
+    margin-right: 20px;
+    border-radius: 10px
+}
+.contents3 .content-3 .coding-basic{
+    display: flex;
+    border-bottom: 1px solid #555;
+}
+.contents3 .content-3 .coding-basic img{
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    padding : 10px;
+}
+.contents3 .content-3 .coding-basic p{
+    padding-top: 35px;
+    padding-left: 10px;
+    font-size: 22px;
+    font-weight: bold;
+}
+.choose{
+    padding-top: 25px;
+    display: grid;
+    grid-gap: 10px;
+    grid-template-columns: repeat(3,auto);
+    padding-left: 40px;
+}
+.choose .btn{
+    width: 40px;
+    height: 40px;
+    display: grid;
+    color: #000;
+    background-color: #fff;
+    font-size: 20px;
+    border: 1px solid #000;
+    border-radius: 5px;
+    padding: auto;
+    border-radius: 50%;
+    margin-bottom: 10px;
+}
+.objects .sections .section-sequence{
+    background-color: #94F109;
+    height: 100vh;
+}
+.section-sequence h2{
+    color: #fff;
+    font-size: 50px;
+    text-align: center;
+    font-weight: 800;
+    padding-top: 20px;
+}
+.section-sequence .contents1{
+    display: flex;
+    margin-left: 150px;
+    margin-top: 40px;
+}
+.section-sequence .contents1 .content-1{
+    width: 250px;
+    height: 220px;
+    background-color: #fff;
+    margin-right: 20px;
+    border-radius: 10px
+}
+.section-sequence .contents1 .content-1 img{
+    width: 100%;
+    height: 160px;
+    border-radius: 10px;
+    margin-bottom: 15px;
+}
+.section-sequence .contents1 .content-1 a{
+    font-size: 18px;
+    font-weight: 600;
+    margin-left: 15px;
+    text-decoration: none;
+    color: #000;
+}
+.section-sequence .contents1 .content-1 a:hover{
+    cursor: pointer;
+    color: teal;
+}
+.section-sequence .contents2{
+    display: flex;
+    margin-left: 150px;
+    margin-top: 40px;
+}
+.section-sequence .contents2 .content-2{
+    width: 250px;
+    height: 220px;
+    background-color: #fff;
+    margin-right: 20px;
+    border-radius: 10px
+}
+.section-sequence .contents2 .content-2 img{
+    width: 100%;
+    height: 180px;
+    border-radius: 10px;
+    margin-bottom: 5px;
+}
+.section-sequence .contents2 .content-2 a{
+    margin-left: 30px;
+    font-size: 18px;
+    font-weight: 600;
+    text-decoration: none;
+    color: #000;
+}
+.section-sequence .contents2 .content-2 a:hover{
+    cursor: pointer;
+    color: teal;
+}
+.section-sequence .contents3{
+    display: flex;
+    margin-left: 500px;
+    margin-top: -440px;
+}
+.section-sequence .contents3 .content-3{
+    width: 300px;
+    height: 380px;
+    background-color: #fff;
+    margin-right: 20px;
+    border-radius: 10px
+  }
+.contents3 .content-3 .coding-sequence{
+    display: flex;
+    border-bottom: 1px solid #555;
+}
+.contents3 .content-3 .coding-sequence img{
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    padding : 10px;
+}
+.contents3 .content-3 .coding-sequence p{
+    padding-top: 35px;
+    padding-left: 20px;
+    font-size: 22px;
+    font-weight: bold;
+}
+.objects .sections .section-loop{
+    background-color: #BC0DEF;
+    height: 100vh;
+}
+.section-loop h2{
+    color: #fff;
+    font-size: 50px;
+    text-align: center;
+    font-weight: 800;
+    padding-top: 20px;
+}
+.section-loop .contents1{
+    display: flex;
+    margin-left: 150px;
+    margin-top: 40px;
+}
+.section-loop .contents1 .content-1{
+    width: 250px;
+    height: 220px;
+    background-color: #fff;
+    margin-right: 20px;
+    border-radius: 10px
+}
+.section-loop .contents1 .content-1 img{
+    width: 100%;
+    height: 160px;
+    border-radius: 10px;
+    margin-bottom: 15px;
+}
+.section-loop .contents1 .content-1 a{
+    font-size: 18px;
+    font-weight: 600;
+    margin-left: 30px;
+    text-decoration: none;
+    color: #000;
+}
+.section-loop .contents1 .content-1 a:hover{
+    cursor: pointer;
+    color: teal;
+}
+.section-loop .contents2{
+    display: flex;
+    margin-left: 150px;
+    margin-top: 40px;
+}
+.section-loop .contents2 .content-2{
+    width: 250px;
+    height: 220px;
+    background-color: #fff;
+    margin-right: 20px;
+    border-radius: 10px
+}
+.section-loop .contents2 .content-2 img{
+    width: 100%;
+    height: 180px;
+    border-radius: 10px;
+    margin-bottom: 7px;
+}
+.section-loop .contents2 .content-2 a{
+    margin-left: 50px;
+    font-size: 18px;
+    font-weight: 600;
+    text-decoration: none;
+    color: #000;
+}
+.section-loop .contents2 .content-2 a:hover{
+    cursor: pointer;
+    color: teal;
+}
+.section-loop .contents3{
+    display: flex;
+    margin-left: 500px;
+    margin-top: -440px;
+}
+.section-loop .contents3 .content-3{
+    width: 300px;
+    height: 380px;
+    background-color: #fff;
+    margin-right: 20px;
+    border-radius: 10px
+}
+.contents3 .content-3 .coding-loop{
+    display: flex;
+    border-bottom: 1px solid #555;
+}
+.contents3 .content-3 .coding-loop img{
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    padding : 10px;
+}
+.contents3 .content-3 .coding-loop p{
+    padding-top: 35px;
+    padding-left: 20px;
+    font-size: 22px;
+    font-weight: bold;
+}
+.objects .sections .section-function{
+    background-color: #08C4FD;
+    height: 100vh;
+}
+.section-function h2{
+    color: #fff;
+    font-size: 50px;
+    text-align: center;
+    font-weight: 800;
+    padding-top: 20px;
+}
+.section-function .contents1{
+    display: flex;
+    margin-left: 150px;
+    margin-top: 40px;
+}
+.section-function .contents1 .content-1{
+    width: 250px;
+    height: 220px;
+    background-color: #fff;
+    margin-right: 20px;
+    border-radius: 10px
+}
+.section-function .contents1 .content-1 img{
+    width: 100%;
+    height: 160px;
+    border-radius: 10px;
+    margin-bottom: 15px;
+}
+.section-function .contents1 .content-1 a{
+    font-size: 18px;
+    font-weight: 600;
+    margin-left: 20px;
+    text-decoration: none;
+    color: #000;
+}
+.section-function .contents1 .content-1 a:hover{
+    cursor: pointer;
+    color: teal;
+}
+.section-function .contents2{
+    display: flex;
+    margin-left: 150px;
+    margin-top: 40px;
+}
+.section-function .contents2 .content-2{
+    width: 250px;
+    height: 220px;
+    background-color: #fff;
+    margin-right: 20px;
+    border-radius: 10px
+}
+.section-function .contents2 .content-2 img{
+    width: 100%;
+    height: 180px;
+    border-radius: 10px;
+    margin-bottom: 7px;
+}
+.section-function .contents2 .content-2 a{
+    margin-left: 35px;
+    font-size: 18px;
+    font-weight: 600;
+    text-decoration: none;
+    color: #000;
+}
+.section-function .contents2 .content-2 a:hover{
+    cursor: pointer;
+    color: teal;
+}
+.section-function .contents3{
+    display: flex;
+    margin-left: 500px;
+    margin-top: -440px;
+}
+.section-function .contents3 .content-3{
+    width: 300px;
+    height: 380px;
+    background-color: #fff;
+    margin-right: 20px;
+    border-radius: 10px
+}
+.contents3 .content-3 .coding-function{
+    display: flex;
+    border-bottom: 1px solid #555;
+}
+.contents3 .content-3 .coding-function img{
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    padding : 10px;
+}
+.contents3 .content-3 .coding-function p{
+    padding-top: 35px;
+    padding-left: 20px;
+    font-size: 22px;
+    font-weight: bold;
+}
+.objects .sections .section-array{
+    background-color: #E6EF0B;
+    height: 100vh;
+}
+.section-array h2{
+    color: #fff;
+    font-size: 50px;
+    text-align: center;
+    font-weight: 800;
+    padding-top: 20px;
+}
+.section-array .contents1{
+    display: flex;
+    margin-left: 150px;
+    margin-top: 40px;
+}
+.section-array .contents1 .content-1{
+    width: 250px;
+    height: 220px;
+    background-color: #fff;
+    margin-right: 20px;
+    border-radius: 10px
+}
+.section-array .contents1 .content-1 img{
+    width: 100%;
+    height: 160px;
+    border-radius: 10px;
+    margin-bottom: 25px;
+}
+.section-array .contents1 .content-1 a{
+    margin-left: 35px;
+    font-size: 18px;
+    font-weight: 600;
+    text-decoration: none;
+    color: #000;
+}
+.section-array .contents1 .content-1 a:hover{
+    cursor: pointer;
+    color: teal;
+}
+.section-array .contents2{
+    display: flex;
+    margin-left: 150px;
+    margin-top: 40px;
+}
+.section-array .contents2 .content-2{
+    width: 250px;
+    height: 220px;
+    background-color: #fff;
+    margin-right: 20px;
+    border-radius: 10px
+}
+.section-array .contents2 .content-2 img{
+    width: 100%;
+    height: 180px;
+    border-radius: 10px;
+    margin-bottom: 7px;
+}
+.section-array .contents2 .content-2 a{
+    margin-left: 50px;
+    font-size: 18px;
+    font-weight: 600;
+    text-decoration: none;
+    color: #000;
+}
+.section-array .contents2 .content-2 a:hover{
+    cursor: pointer;
+    color: teal;
+}
+.section-array .contents3{
+    display: flex;
+    margin-left: 500px;
+    margin-top: -440px;
+}
+.section-array .contents3 .content-3{
+    width: 300px;
+    height: 380px;
+    background-color: #fff;
+    margin-right: 20px;
+    border-radius: 10px
+}
+.contents3 .content-3 .coding-array{
+    display: flex;
+    border-bottom: 1px solid #555;
+}
+.contents3 .content-3 .coding-array img{
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    padding : 10px;
+}
+.contents3 .content-3 .coding-array p{
+    padding-top: 35px;
+    padding-left: 20px;
+    font-size: 22px;
+    font-weight: bold;
+}

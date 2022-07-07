@@ -1,10 +1,12 @@
 import React, {useState} from 'react';
+import { useTranslation } from 'react-i18next';
 import {Link} from 'react-router-dom';
 import {useForm} from "react-hook-form";
 import { AiFillEyeInvisible, AiFillEye } from 'react-icons/ai';
 import { useHistory } from 'react-router-dom';
 import './style.css';
 const SignUp = () => {
+    const [t, i18n] = useTranslation();
     const {register, handleSubmit, formState: { errors}} = useForm();
     const onSubmit = (data) => {
         console.log(data);
@@ -32,19 +34,19 @@ const SignUp = () => {
             return <span>Maximum required age is 13</span>
         }
         else{
-            history.push("/objects");
+            history.push("/profile");
         }
     }
     return ( 
         <div className="sign">
-            <img className="mascot-doc" src="./images/mascot-doc.png" alt="mascot-doc-image" />
+            <img className="mascot-doc" src="./images/mascot-doc.png" alt="mascot-doc" />
             <form className="input-group signup" onSubmit={handleSubmit(onSubmit)}>
-                <label className="label">Your Name</label>
+                <label className="label">{t('name')}</label>
                 <input type="text" className="input-field"
-                placeholder="Enter Your Name" id="input1" required/>
-                <label className="label">Your Age</label>
+                placeholder={t('enter-name')} id="input1" required/>
+                <label className="label">{t('age')}</label>
                 <input type="text" className="input-field"
-                placeholder="Enter Your Age"
+                placeholder={t('enter-age')}
                 {...register("age", {
                     reqired: "Age is required",
                     min: {
@@ -63,21 +65,21 @@ const SignUp = () => {
                 <div className='error'>
                     {errors.age && (<small>{errors.age.message}</small>)}
                 </div><br />
-                <label className="label">Your Email</label>
+                <label className="label">{t('email')}</label>
                 <input type="email" className="input-field"
-                placeholder="Enter Your Email" id="input3" required />
-                <label className="label">Your Password</label>
+                placeholder={t('enter-email')} id="input3" required />
+                <label className="label">{t('your-password')}</label>
                 <input type={passwordEye === false ? "password": "text"}
                 className="input-field"
-                placeholder="Enter Password" id="input4" required />
+                placeholder={t('enter-password')} id="input4" required />
                 <div className="icon-eye">
                     {
                         (passwordEye === false)?<AiFillEyeInvisible onClick={handlePasswordClick} />:
                         <AiFillEye onClick={handlePasswordClick} />
                     }  
                 </div>
-                <button type="submit" className="submit-btn btn2" onClick={handleClick}>Sign Up</button>
-                <p>Already have an account?<Link to="/signin" className="link">Sign In</Link></p>
+                <button type="submit" className="submit-btn btn2" onClick={handleClick}>{t('signup')}</button>
+                <p>{t('already')}<Link to="/signin" className="link">{t('signin')}</Link></p>
             </form>
         </div>
      );

@@ -1,0 +1,626 @@
+.profile{
+    font-family: 'Nunito', sans-serif;
+    box-sizing: border-box;
+    overflow-x: hidden;
+    display: flex;
+    width: 100%;
+}
+.profile .header{
+    position: fixed;
+    top:0;
+    left:0;
+    height:100%;
+    width:400px;
+    background:rgb(13, 179, 179);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-flow: column;
+    text-align: center;
+}
+.profile .header .user img{
+    height: 120px;
+    width: 120px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-top: -70px;
+    margin-bottom: 5px;
+}
+.profile .header .user .name{
+    font-size: 25px;
+    color:#fff;
+    text-transform: capitalize;
+    margin-bottom: 20px;
+}
+.profile .header .navbar{
+    width: 100%;
+}
+.profile .header .navbar ul{
+    list-style: none;
+    padding: 5px 10px;
+    border-top: 1px solid rgba(0,0,0,0.05);
+}
+.profile .header .navbar ul li{
+    display: flex;
+    align-items: center;
+    /*background: #355C7D;*/
+    background: #191970;
+    color:#fff;
+    border-radius: 50px;
+    margin-left: 30px;
+    margin-right: 30px;
+    margin-top: 10px;
+    padding-top: 12px;
+    padding-bottom: 12px;
+    padding-left: 70px;
+    padding-right: 70px;
+}
+.profile .header .navbar ul li a{
+    text-decoration: none;
+    display: block;  
+    font-size: 20px;
+    margin-left: 20px;
+}
+.profile .header .navbar ul li .back{
+    color: #fff;
+    text-decoration: none;
+}
+.profile .header .navbar ul li a .icon{
+    max-width: 20px;
+    transition: 0.5s;
+    margin-right: 10px;
+}
+.profile .header .navbar ul li:hover{
+    background: #46d6cf;
+    color: #191970;
+    cursor: pointer;
+}
+
+.profile .sections{
+    width: calc(100% - 400px);
+    margin-left: 400px;
+    float: left;
+    position: absolute;
+    min-height: 100vh;
+    background-color: #46d6cf;
+}
+/* Games */
+.profile .sections .games{
+    display: flex;
+    justify-content: center;
+    flex-flow: column;
+    padding:0 30px;
+    height: 100vh;
+}
+.profile .sections .games .container{
+    display: flex;
+}
+.sections .games .gametype{
+    margin-left: 25px;
+    margin-top: 10px;
+    margin-bottom: 40px;
+}
+.sections .games .gametype .gametype-contain{
+    width: 250px;
+    height: 220px;
+    background-color: #fff;
+    margin-right: 20px;
+    border-radius: 10px;
+}
+.sections .games .gametype .gametype-contain img{
+    width: 100%;
+    height: 170px;
+    border-radius: 10px;
+    margin-bottom: 10px;
+}
+.sections .games .gametype .gametype-contain a{
+    text-decoration: none;
+    color: #333;
+    font-size: 20px;
+    text-transform: capitalize;
+    margin-left: 60px;
+}
+.sections .games .gametype .gametype-contain a:hover{
+    cursor: pointer;
+    color: teal;
+}
+.sections .games .gametype .gametype-contain .link-sequence{
+    margin-left: 70px;
+}
+.sections .games .gametype .gametype-contain .link-loop{
+    margin-left: 90px;
+}
+.sections .games .gametype .gametype-contain .link-function{
+    margin-left: 80px;
+}
+.sections .games .gametype .gametype-contain .link-array{
+    margin-left: 100px;
+}
+/* Coding Basics-Sequences-Loops-Functions-Arrays */
+.profile .sections .basics,
+.profile .sections .sequences,
+.profile .sections .loops,
+.profile .sections .functions,
+.profile .sections .arrays{
+    height: 100vh;
+}
+.profile .sections .color-basic{
+    background-color: #09EB4D;
+}
+.profile .sections .color-sequence{
+    background-color: #94F109;
+}
+.profile .sections .color-loop{
+    background-color: #BC0DEF;
+}
+.profile .sections .color-function{
+    background-color: #08C4FD;
+}
+.profile .sections .color-array{
+    background-color: #E6EF0B;
+}
+.profile .sections .basics .container .title,
+.profile .sections .sequences .container .title,
+.profile .sections .loops .container .title,
+.profile .sections .functions .container .title,
+.profile .sections .arrays .container .title{
+    display: flex;
+}
+.profile .sections .basics .container .back,
+.profile .sections .sequences .container .back,
+.profile .sections .loops .container .back,
+.profile .sections .functions .container .back,
+.profile .sections .arrays .container .back{
+    padding-top: 50px;
+    font-size: 40px;
+    color: #333;
+    margin-left: 20px;
+}
+.profile .sections .basics .container h2,
+.profile .sections .sequences .container h2,
+.profile .sections .loops .container h2,
+.profile .sections .functions .container h2,
+.profile .sections .arrays .container h2{
+    padding-top: 40px;
+    padding-left: 20px;
+    color: #fff;
+    font-size: 50px;
+    font-weight: bold;
+    text-align: center;
+}
+.profile .sections .basics .container .content-basics,
+.profile .sections .sequences .container .content-sequences,
+.profile .sections .loops .container .content-loops,
+.profile .sections .functions .container .content-functions,
+.profile .sections .arrays .container .content-arrays{
+    display: flex;
+    justify-content: space-between;
+    margin: 120px 40px;
+}
+.profile .sections .basics .container .content-basics .content,
+.profile .sections .sequences .container .content-sequences .content,
+.profile .sections .loops .container .content-loops .content,
+.profile .sections .functions .container .content-functions .content,
+.profile .sections .arrays .container .content-arrays .content{
+    width: 250px;
+    height: 220px;
+    background-color: #fff;
+    border-radius: 10px;
+}
+.profile .sections .basics .container .content-basics .content img,
+.profile .sections .sequences .container .content-sequences .content img,
+.profile .sections .loops .container .content-loops .content img,
+.profile .sections .functions .container .content-functions .content img,
+.profile .sections .arrays .container .content-arrays .content img{
+    width: 100%;
+    height: 170px;
+    border-radius: 10px;
+    margin-bottom: 10px;
+}
+.profile .sections .basics .container .content-basics .content a,
+.profile .sections .sequences .container .content-sequences .content a,
+.profile .sections .loops .container .content-loops .content a,
+.profile .sections .functions .container .content-functions .content a,
+.profile .sections .arrays .container .content-arrays .content a{
+    font-size: 20px;
+    text-decoration: none;
+    color: teal;
+    font-weight: bold;
+    font-family: sans-serif;
+}
+.profile .sections .basics .container .content-basics .content .link1,
+.profile .sections .sequences .container .content-sequences .content .link1,
+.profile .sections .loops .container .content-loops .content .link1,
+.profile .sections .functions .container .content-functions .content .link1,
+.profile .sections .arrays .container .content-arrays .content .link1{
+    margin-left: 60px;
+}
+.profile .sections .basics .container .content-basics .content .link2,
+.profile .sections .sequences .container .content-sequences .content .link2,
+.profile .sections .loops .container .content-loops .content .link2,
+.profile .sections .functions .container .content-functions .content .link2,
+.profile .sections .arrays .container .content-arrays .content .link2{
+    margin-left: 90px;
+}
+.profile .sections .basics .container .content-basics .content .link3,
+.profile .sections .sequences .container .content-sequences .content .link3,
+.profile .sections .loops .container .content-loops .content .link3,
+.profile .sections .functions .container .content-functions .content .link3,
+.profile .sections .arrays .container .content-arrays .content .link3{
+    margin-left: 90px;
+}
+.profile .sections .basics .container .content-basics .content a:hover,
+.profile .sections .sequences .container .content-sequences .content a:hover,
+.profile .sections .loops .container .content-loops .content a:hover,
+.profile .sections .functions .container .content-functions .content a:hover,
+.profile .sections .arrays .container .content-arrays .content a:hover{
+    cursor: pointer;
+    color: #191970;
+}
+/* tutorial-basic, tutorial-sequence, tutorial-loop */
+.profile .sections .tutorial-basic,
+.profile .sections .tutorial-sequence,
+.profile .sections .tutorial-loop,
+.profile .sections .tutorial-function,
+.profile .sections .tutorial-array{
+    width: 100%;
+    height: 100vh;
+}
+.profile .sections .t-basicColor{
+    background-color: #09EB4D;
+}
+.profile .sections .t-sequenceColor{
+    background-color: #94F109;
+}
+.profile .sections .t-loopColor{
+    background-color: #BC0DEF;
+}
+.profile .sections .t-functionColor{
+    background-color: #08C4FD;
+}
+.profile .sections .t-arrayColor{
+    background-color: #E6EF0B;
+}
+.profile .sections .tutorial-basic .title,
+.profile .sections .tutorial-sequence .title,
+.profile .sections .tutorial-loop .title,
+.profile .sections .tutorial-function .title,
+.profile .sections .tutorial-array .title{
+    display: flex;
+}
+.profile .sections .tutorial-basic .title .back,
+.profile .sections .tutorial-sequence .title .back,
+.profile .sections .tutorial-loop .title .back,
+.profile .sections .tutorial-function .title .back,
+.profile .sections .tutorial-array .title .back{
+    padding-top: 35px;
+    font-size: 40px;
+    color: #333;
+    margin-left: 20px;
+    margin-top: 15px;
+}
+.profile .sections .tutorial-basic .title h2,
+.profile .sections .tutorial-sequence .title h2,
+.profile .sections .tutorial-loop .title h2,
+.profile .sections .tutorial-function .title h2,
+.profile .sections .tutorial-array .title h2{
+    padding-top: 40px;
+    padding-left: 20px;
+    color: #fff;
+    font-size: 50px;
+    font-weight: bold;
+    text-align: center;
+}
+.profile .sections .tutorial-basic video,
+.profile .sections .tutorial-sequence video,
+.profile .sections .tutorial-loop video,
+.profile .sections .tutorial-function video,
+.profile .sections .tutorial-array video{
+    outline: 0;
+    width: 500px;
+    height: 400px;
+    margin-left: 200px;
+    border-radius: 10px
+}
+/* Explain Basic, Explain Sequence */
+.profile .sections .explain-basic,
+.profile .sections .explain-sequence,
+.profile .sections .explain-loop,
+.profile .sections .explain-function,
+.profile .sections .explain-array{
+    width: 100%;
+    height: 100vh;
+}
+.profile .sections .e-basicColor{
+    background-color: #09EB4D;
+}
+.profile .sections .e-sequenceColor{
+    background-color: #94F109;
+}
+.profile .sections .e-loopColor{
+    background-color: #BC0DEF;
+}
+.profile .sections .e-functionColor{
+    background-color: #08C4FD;
+}
+.profile .sections .e-arrayColor{
+    background-color: #E6EF0B;
+}
+.profile .sections .explain-basic .title,
+.profile .sections .explain-sequence .title,
+.profile .sections .explain-loop .title,
+.profile .sections .explain-function .title,
+.profile .sections .explain-array .title{
+    display: flex;
+}
+.profile .sections .explain-basic .title .back,
+.profile .sections .explain-sequence .title .back,
+.profile .sections .explain-loop .title .back,
+.profile .sections .explain-function .title .back,
+.profile .sections .explain-array .title .back{
+    padding-top: 35px;
+    font-size: 40px;
+    color: #333;
+    margin-left: 20px;
+    margin-top: 15px;
+}
+.profile .sections .explain-basic .title h2,
+.profile .sections .explain-sequence .title h2,
+.profile .sections .explain-loop .title h2,
+.profile .sections .explain-function .title h2,
+.profile .sections .explain-array .title h2{
+    padding-top: 40px;
+    padding-left: 20px;
+    color: #fff;
+    font-size: 50px;
+    font-weight: bold;
+    text-align: center;
+}
+/* Games */
+.profile .sections .games-basic,
+.profile .sections .games-sequence,
+.profile .sections .games-loop,
+.profile .sections .games-function,
+.profile .sections .games-array{
+    width: 100%;
+    height: 100vh;
+}
+.profile .sections .g-basicColor{
+    background-color: #09EB4D;
+}
+.profile .sections .g-sequenceColor{
+    background-color: #94F109;
+}
+.profile .sections .g-loopColor{
+    background-color: #BC0DEF;
+}
+.profile .sections .g-functionColor{
+    background-color: #08C4FD;
+}
+.profile .sections .g-arrayColor{
+    background-color: #E6EF0B;
+}
+.profile .sections .games-basic .title,
+.profile .sections .games-sequence .title,
+.profile .sections .games-loop .title,
+.profile .sections .games-function .title,
+.profile .sections .games-array .title{
+    display: flex;
+}
+.profile .sections .games-basic .title .back,
+.profile .sections .games-sequence .title .back,
+.profile .sections .games-loop .title .back,
+.profile .sections .games-function .title .back,
+.profile .sections .games-array .title .back{
+    padding-top: 35px;
+    font-size: 40px;
+    color: #333;
+    margin-left: 20px;
+    margin-top: 15px;
+}
+.profile .sections .games-basic .title h2,
+.profile .sections .games-sequence .title h2,
+.profile .sections .games-loop .title h2,
+.profile .sections .games-function .title h2,
+.profile .sections .games-array .title h2{
+    padding-top: 40px;
+    padding-left: 20px;
+    color: #fff;
+    font-size: 50px;
+    font-weight: bold;
+    text-align: center;
+}
+.profile .sections .games-basic .levels,
+.profile .sections .games-sequence .levels,
+.profile .sections .games-loop .levels,
+.profile .sections .games-function .levels,
+.profile .sections .games-array .levels{
+    background-color: #fff;
+    width: 80%;
+    height: 300px;
+    margin-left: 80px;
+    margin-top: 80px;
+    border-radius: 10px;
+}
+.profile .sections .games-basic .levels h3,
+.profile .sections .games-sequence .levels h3,
+.profile .sections .games-loop .levels h3,
+.profile .sections .games-function .levels h3,
+.profile .sections .games-array .levels h3{
+    padding-top: 20px;
+    font-size: 40px;
+    font-weight: bold;
+    text-align: center;
+    color: #191970;
+}
+.profile .sections .games-basic .levels .choose,
+.profile .sections .games-sequence .levels .choose,
+.profile .sections .games-loop .levels .choose,
+.profile .sections .games-function .levels .choose,
+.profile .sections .games-array .levels .choose{
+    padding-top: 30px;
+    display: grid;
+    grid-gap: 15px;
+    grid-template-columns: repeat(5,auto);
+    padding-left: 60px;
+}
+.profile .sections .games-basic .levels .choose .btn,
+.profile .sections .games-sequence .levels .choose .btn,
+.profile .sections .games-loop .levels .choose .btn,
+.profile .sections .games-function .levels .choose .btn,
+.profile .sections .games-array .levels .choose .btn{
+    width: 55px;
+    height: 55px;
+    display: grid;
+    padding: auto;
+    color: #191970;
+    background-color: rgb(219, 219, 219);
+    font-size: 25px;
+    font-weight: bold;
+    border: none;
+    border-radius: 10px;
+    margin-bottom: 10px;
+}
+/* Edit-Profile */
+.profile .sections .edit-profile{
+    height: 100vh;
+}
+.profile .sections .edit-profile form{
+    padding-left: 120px;
+    padding-top: 40px;
+}
+.profile .sections .edit-profile form input{
+    padding: 10px;
+    background: #ebebeb;
+    border: transparent;
+    border: 0.3px solid #ccc;
+    outline: none;
+}
+.profile .sections .edit-profile form input[type = submit]{
+    background: #21ABA5;
+    border: 0.3px solid #21ABA5;
+    color: #fff;
+    cursor: pointer;
+}
+.profile .sections .edit-profile form input[type = text]{
+    width: 60%;
+}
+.profile .sections .edit-profile form input[type = submit]{
+    width: 10%;
+}
+
+.profile .sections .settings{
+    height: 100vh;
+}
+.profile .sections .settings button{
+    padding-left: 40px;
+    padding-right: 40px;
+    padding-top: 30px;
+    padding-bottom: 30px;
+    border: none;
+
+}
+.profile .sections .settings .button-ar{
+    margin-left: 350px;
+    margin-top: 200px;
+    margin-right: 20px;
+}
+/* About Us */
+.sections .about{
+    height: 100vh;
+}
+.sections .about .container{
+    height: 100vh;
+    display: inline-block;
+}
+.sections .about .container h2{
+    text-align: center;
+    padding-top: 25px;
+    font-size: 40px;
+    color: #fff;
+    font-weight: bold;
+}
+.sections .about .container .users{
+    display: flex;
+    margin-top: 20px;
+    margin-left: 150px;
+}
+.sections .about .container .users .user{
+    padding-right: 80px;
+}
+.sections .about .container .users .user img{
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    margin-bottom: 10px;
+}
+.sections .about .container .users .user h3{
+    text-transform: capitalize;
+    font-size: 22px;
+}
+.sections .about .container .users .user h3 span{
+    font-size: 16px;
+    font-weight: bold;
+}
+/* Rate and Review */
+.sections .rate{
+    height: 100vh;
+    margin: auto;
+    box-sizing: border-box;
+}
+.sections .rate h2{
+    text-align: center;
+    padding-top: 25px;
+    font-size: 40px;
+    font-weight: bold;
+    color: #fff;
+}
+.sections .rate h4{
+    padding-top: 50px;
+    padding-bottom: 20px;
+    text-align: center;
+    font-size: 30px;
+    color: #333;
+}
+.sections .rate svg{
+    width: 300px;
+    height: 300px;
+    margin-left: 300px;
+}
+circle{
+    stroke:#DDDDDD;
+}
+.sections .rate svg circle{
+    fill: none;
+    stroke-width: 20;
+    transform: rotate(-0.25turn);
+    transform-origin: center center;
+    stroke: #DDDDDD;
+    stroke-dasharray: 817;
+    stroke-linecap: round;
+    animation-duration: 3s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+    stroke: rgb(243, 41, 41);
+    animation-name: move;   
+}
+.sections .rate .number{
+    color: rgb(243, 41, 41);
+    transform: translate(-50%, -50%);
+    font-size: 3em;
+    font-family: 'Roboto', sans-serif;
+    position: absolute;
+    margin-top: -150px;
+    margin-left: 450px;
+}
+@keyframes move{
+    0%{
+        stroke-dashoffset: 817;
+    }
+    90%{
+        stroke-dashoffset: 245.1;
+    }
+    100%{
+        stroke-dashoffset: 245.1;
+    }
+}

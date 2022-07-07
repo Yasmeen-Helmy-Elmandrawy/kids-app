@@ -1,0 +1,22 @@
+{
+    "title": "welcome to kidcoder",
+    "paragraph": "Coding platform for kids. start journey with us",
+    "button": "Start Here",
+    "username": "Username",
+    "password": "Password",
+    "remember": "Remember Me",
+    "forget": "Forget Password?",
+    "signin": "Sign In",
+    "account": "Don’t have account?",
+    "signup": "Sign Up",
+    "enter-username": "Enter Username",
+    "enter-password": "Enter Password",
+    "already": "Already have an account?",
+    "name": "Your Name",
+    "age": "Your Age",
+    "email": "Your Email",
+    "your-password": "Your Password",
+    "enter-name": "Enter Your Name",
+    "enter-age": "Enter Your Age",
+    "enter-email": "Enter Your Email"
+}

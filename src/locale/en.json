@@ -18,5 +18,15 @@
     "your-password": "Your Password",
     "enter-name": "Enter Your Name",
     "enter-age": "Enter Your Age",
-    "enter-email": "Enter Your Email"
+    "enter-email": "Enter Your Email",
+    "games": "Games",
+    "help": "Help Center",
+    "about": "About Us",
+    "rate": "Rate Us",
+    "logout": "Log Out",
+    "codingBasics": "coding Basics",
+    "sequences": "sequences",
+    "loops": "Loops",
+    "functions": "functions",
+    "arrays": "arrays"
 }

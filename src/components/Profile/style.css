@@ -18,18 +18,10 @@
     flex-flow: column;
     text-align: center;
 }
-.profile .header .user img{
-    height: 120px;
-    width: 120px;
-    border-radius: 50%;
-    object-fit: cover;
-    margin-top: -70px;
-    margin-bottom: 5px;
-}
-.profile .header .user .name{
-    font-size: 25px;
-    color:#fff;
-    text-transform: capitalize;
+.profile .header .name{
+    text-transform: uppercase;
+    color: white;
+    font-size: 50px;
     margin-bottom: 20px;
 }
 .profile .header .navbar{
@@ -44,14 +36,15 @@
     display: flex;
     align-items: center;
     /*background: #355C7D;*/
-    background: #191970;
+    /*background: #191970;*/
+    background: #151B54;
     color:#fff;
     border-radius: 50px;
     margin-left: 30px;
     margin-right: 30px;
-    margin-top: 10px;
-    padding-top: 12px;
-    padding-bottom: 12px;
+    margin-top: 15px;
+    padding-top: 13px;
+    padding-bottom: 13px;
     padding-left: 70px;
     padding-right: 70px;
 }
@@ -71,8 +64,8 @@
     margin-right: 10px;
 }
 .profile .header .navbar ul li:hover{
-    background: #46d6cf;
-    color: #191970;
+    background: #16E2F5;
+    color: #151B54;
     cursor: pointer;
 }
 
@@ -358,7 +351,7 @@
 .profile .sections .explain-loop .title .back,
 .profile .sections .explain-function .title .back,
 .profile .sections .explain-array .title .back{
-    padding-top: 35px;
+    padding-top: 15px;
     font-size: 40px;
     color: #333;
     margin-left: 20px;
@@ -369,12 +362,245 @@
 .profile .sections .explain-loop .title h2,
 .profile .sections .explain-function .title h2,
 .profile .sections .explain-array .title h2{
-    padding-top: 40px;
+    padding-top: 20px;
     padding-left: 20px;
     color: #fff;
     font-size: 50px;
     font-weight: bold;
     text-align: center;
+}
+/* Explain basics */
+.explain-basic .explain .definition-basic{
+    display: flex;
+    margin-top: 5px;
+    margin-left: 15px;
+}
+.explain-basic .explain .definition-basic .img-basic{
+    width: 80px;
+    height: 80px;
+    margin-top: 10px;
+    border-radius: 10px;
+}
+.explain-basic .explain .definition-basic .para-basic{
+    line-height: 1.5;
+    margin-top: 18px;
+    font-size: 20px;
+    padding-left: 15px;
+    color: #333;
+}
+.explain-basic .explain .h2-basic{
+    color: rgb(8, 30, 102);
+    margin-left: 30px;
+    padding-top: 10px;
+    text-align: center;
+}
+.explain-basic .explain .h3-basic{
+    margin-top: 10px;
+    margin-bottom: 10px;
+    margin-left: 30px;
+    font-size: 22px;
+    color: #fff;
+}
+.explain-basic .explain .para2-basic{
+    line-height: 1.5;
+    font-size: 18px;
+    padding-right: 10px;
+    margin-left: 30px;
+}
+.explain-basic .explain .var{
+    font-weight: bold;
+    margin-top: 10px;
+}
+.explain-basic .explain .img-code{
+    margin-top: 5px;
+    margin-left: 30px;
+}
+/* Explain sequences */
+.explain-sequence .explain .definition-sequence{
+    display: flex;
+    margin-top: 5px;
+    margin-left: 15px;
+}
+.explain-sequence .explain .definition-sequence .img-sequence{
+    width: 100px;
+    height: 100px;
+    margin-top: 10px;
+    border-radius: 50%;
+    margin-right: 10px;
+}
+.explain-sequence .explain .definition-sequence .para-sequence{
+    line-height: 1.5;
+    margin-top: 20px;
+    font-size: 18px;
+    padding-right: 10px;
+}
+.explain-sequence .explain .para2-sequence{
+    margin-top: 10px;
+    line-height: 1.5;
+    font-size: 18px;
+    padding-right: 10px;
+    margin-left: 30px;
+}
+.explain-sequence .explain .understand{
+    font-weight: bold;
+    margin-top: 5px;
+    color: #333;
+}
+.explain-sequence .explain .code{
+    display: flex;
+}
+.explain-sequence .explain .code .img-code{
+    margin-top: 5px;
+    margin-left: 30px;
+    width: 400px;
+    height: 320px;
+}
+.explain-sequence .explain .code .output{
+    font-weight: bold;
+    font-size: 20px;
+    margin-left: 30px;
+    margin-top: 10px;
+}
+.explain-sequence .explain .code .img-output{
+    margin-top: 50px;
+    margin-left: 30px;
+    margin-bottom: 20px;
+    width: 450px;
+    height: 100px;
+}
+/* Explain loops */
+.explain-loop .explain .definition{
+    display: flex;
+    margin-top: 5px;
+    margin-left: 15px;
+}
+.explain-loop .explain .definition .img-loop{
+    width: 80px;
+    height: 80px;
+    margin-top: 10px;
+    margin-right: 10px;
+}
+.explain-loop .explain .definition .para-loop{
+    line-height: 1.5;
+    margin-top: 10px;
+    font-size: 18px;
+    padding-right: 10px;
+}
+.explain-loop .explain .h3-loop{
+    margin-top: 20px;
+    margin-bottom: 15px;
+    margin-left: 30px;
+    color: #fff;
+}
+.explain-loop .explain .para2-loop{
+    line-height: 1.5;
+    margin-top: 10px;
+    font-size: 18px;
+    padding-right: 10px;
+    margin-left: 30px;
+}
+.explain-loop .explain .code-screen{
+    display: flex;
+}
+.explain-loop .explain .img-code{
+    margin-top: 10px;
+    margin-left: 30px;
+}
+.explain-loop .explain .output{
+    font-weight: bold;
+    font-size: 20px;
+    margin-left: 30px;
+}
+.explain-loop .explain .img-output{
+    margin-top: 10px;
+    margin-left: 30px;
+}
+.explain-loop .explain .para2-loop span{
+    font-weight: bold;
+}
+/* Explain Function */
+.explain-function .explain .definition-f{
+    display: flex;
+    margin-left: 15px;
+}
+.explain-function .explain .definition-f .img-function{
+    width: 100px;
+    height: 100px;
+    margin-right: 10px;
+}
+.explain-function .explain .definition-f .para-function{
+    line-height: 1.5;
+    margin-top: 23px;
+    font-size: 18px;
+    padding-right: 10px;
+}
+.explain-function .explain .para-function{
+    line-height: 1.5;
+    margin-top: 20px;
+    font-size: 18px;
+    padding-right: 10px;
+    margin-left: 30px;
+}
+.explain-function .explain .example{
+    line-height: 1.5;
+    font-size: 18px;
+    padding-right: 10px;
+    font-weight: bold;
+    margin-left: 30px;
+}
+.explain-function .explain .code{
+    display: flex;
+}
+.explain-function .explain .code .img-code{
+    margin-top: 5px;
+    margin-left: 30px;
+    width: 600px;
+}
+.explain-function .explain .code .img-output{
+    margin-left: 30px;
+    width: 200px;
+    height: 80px;
+    margin-top: 20px;
+}
+/* Eplain Arrays */
+.explain-array .explain .definition-array{
+    display: flex;
+    margin-top: 10px;
+    margin-left: 15px;
+}
+.explain-array .explain .definition-array .img-array{
+    width: 100px;
+    height: 100px;
+    margin-top: 20px;
+    margin-right: 10px;
+    border-radius: 10px;
+}
+.explain-array .explain .definition-array .para-array{
+    line-height: 1.5;
+    margin-top: 30px;
+    font-size: 18px;
+    padding-right: 10px;
+}
+.explain-array .explain .h2-array{
+    color: rgb(57, 98, 231);
+    margin-left: 30px;
+    padding-top: 20px;
+    text-align: center;
+}
+.explain-array .explain .para2-array{
+    line-height: 1.5;
+    margin-top: 20px;
+    font-size: 18px;
+    padding-right: 10px;
+    margin-left: 30px;
+}
+.explain-array .explain .h3-array{
+    margin-top: 20px;
+    margin-bottom: 15px;
+    margin-left: 30px;
+}
+.explain-array .explain .img-code{
+    margin-left: 50px;
 }
 /* Games */
 .profile .sections .games-basic,
@@ -482,7 +708,7 @@
     margin-bottom: 10px;
 }
 /* Edit-Profile */
-.profile .sections .edit-profile{
+/*.profile .sections .edit-profile{
     height: 100vh;
 }
 .profile .sections .edit-profile form{
@@ -507,7 +733,7 @@
 }
 .profile .sections .edit-profile form input[type = submit]{
     width: 10%;
-}
+}*/
 
 .profile .sections .settings{
     height: 100vh;
@@ -524,6 +750,31 @@
     margin-left: 350px;
     margin-top: 200px;
     margin-right: 20px;
+}
+/* Help Center */
+.sections .help{
+    height: 100vh;
+}
+.sections .help .container h2{
+    text-align: center;
+    color: #fff;
+    font-size: 40px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+.sections .help .container img{
+    width: 100%;
+    height: 400px;
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-bottom: 20px;
+}
+.sections .help .container p{
+    font-size: 20px;
+    line-height: 1.5;
+    padding-left: 40px;
+    padding-right: 30px;
+    color: #333;
 }
 /* About Us */
 .sections .about{

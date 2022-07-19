@@ -1,14 +1,17 @@
-import React from 'react';
+import React, {useState} from 'react';
 import {Link} from 'react-scroll';
 import { Link as NavLink } from 'react-router-dom';
 import { CgGames } from "react-icons/cg";
-import { MdLiveHelp } from "react-icons/md";
+import { MdLiveHelp} from "react-icons/md";
 import { FaUsers } from "react-icons/fa";
 import { MdOutlineRateReview } from "react-icons/md";
 import { FiLogOut } from "react-icons/fi";
 import { FaArrowCircleLeft } from 'react-icons/fa';
+import { FaStar } from 'react-icons/fa';
 import './style.css';
 const Profile = () => {
+    const [rating, setRating] = useState(null);
+    const [hover, setHover] = useState(null);
     return ( 
         <div className="profile">
             <div className="header">
@@ -90,7 +93,7 @@ const Profile = () => {
                         <h2>Video Tutorial</h2>
                     </div>
                     <video className="video-b" controls autoPlay loop>
-                        <source src="./videos/Basic.mp4" type="video/mp4" />
+                        <source src="./videos/Basics.MP4" type="video/mp4" />
                         Your browser does not support the video tag.
                     </video>
                 </div>
@@ -110,11 +113,11 @@ const Profile = () => {
                         <h3 className="h3-basic">-Variable</h3>
                         <p className="para2-basic">A variable is a name of the memory location. It is used to store data. 
                         Its value can be changed, and it can be reused many times.</p>
-                        <p className="para2-basic var">The example of declaring the variable is given below:</p>
-                        <img className="img-code" src="./images/basic/code.png" alt="example-code" /><br />
+                        <p className="para2-basic var">The example of declaring the variable and provide values as given below:</p>
+                        <img className="img-code" src="./images/basic/code2.png" alt="example-code" /><br />
                         <p className="para2-basic">Here, a, b, c are variables. The int, float, char are the data types.</p>
-                        <p className="para2-basic var">We can also provide values while declaring the variables as given below:</p>
-                        <img className="img-code" src="./images/basic/code2.png" alt="example-code-2" /><br />
+                        <p className="para2-basic var">In the example above we use two variables, x and y, to test whether x is greater than y. As x is 20, and y is 18, and we know that 20 is greater than 18, we print to the screen that "x is greater than y".</p>
+                        <img className="img-code" src="./images/basic/code-if.png" alt="example-code-2" /><br />
                     </div>
                 </div>
 
@@ -169,7 +172,7 @@ const Profile = () => {
                         <h2>Video Tutorial</h2>
                     </div>
                     <video className="video" controls autoPlay loop>
-                        <source src="./videos/Sequence.mp4" type="video/mp4" />
+                        <source src="./videos/Sequences.mp4" type="video/mp4" />
                         Your browser does not support the video tag.
                     </video>
                 </div>
@@ -246,7 +249,7 @@ const Profile = () => {
                         <h2>Video Tutorial</h2>
                     </div>
                     <video className="video-b" controls autoPlay loop>
-                        <source src="./videos/Basic.mp4" type="video/mp4" />
+                        <source src="./videos/Loops.mp4" type="video/mp4" />
                         Your browser does not support the video tag.
                     </video>
                 </div>
@@ -325,7 +328,7 @@ const Profile = () => {
                         <h2>Video Tutorial</h2>
                     </div>
                     <video className="video" controls autoPlay loop>
-                        <source src="./videos/Basic.mp4" type="video/mp4" />
+                        <source src="./videos/Functions.mp4" type="video/mp4" />
                         Your browser does not support the video tag.
                     </video>
                 </div>
@@ -464,7 +467,7 @@ const Profile = () => {
                         <h2>About Us</h2>
                         <div className="users">
                             <div className="user">
-                                <img src="./images/yasmeen.png" alt="user1-img" />
+                                <img src="./images/yasmeen8.jpg" alt="user1-img" />
                                 <h3>yasmeen helmy<br /><span>(FrontEnd Developer)</span></h3>
                             </div>
                             <div className="user">
@@ -472,7 +475,7 @@ const Profile = () => {
                                 <h3>katreen mikhael<br /><span>(FrontEnd Developer)</span></h3>
                             </div>
                             <div className="user">
-                                <img src="./images/yasmeen.png" alt="user3-img" />
+                                <img src="./images/mohamed.jfif" alt="user3-img" />
                                 <h3>mohamed osama<br /><span>(BackEnd Developer)</span></h3>
                             </div>
                         </div>
@@ -491,12 +494,29 @@ const Profile = () => {
 
                 <div className="rate" id="rate">
                     <h2>Rate and Review</h2>
-                    <h4>Course Progress</h4>
-                    <svg>
-                        <circle r="130" cx="150" cy="150" />
-                        <circle r="130" cx="150" cy="150" />
-                    </svg> 
-                    <div className="number">70%</div>
+                    <div className="five-star">
+                        {[...Array(5)].map((star, i) => {
+                            const ratingValue = i + 1;
+                            return (
+                                <label>
+                                    <input
+                                        type="radio"
+                                        name="rating"
+                                        value = {ratingValue}
+                                        onClick = { () => setRating(ratingValue)}
+                                    />
+                                    <FaStar
+                                        className="star"
+                                        color={ratingValue <= (hover || rating) ? "#ffc107" : "#e4e5e9"}
+                                        size={100}
+                                        onMouseEnter={() => setHover(ratingValue)}
+                                        onMouseLeave={() => setHover(null)}
+                                    />
+                                </label>
+                            )
+                        })}
+                        <p className="rating">The rating is {rating}.</p>
+                    </div>
                 </div>
 
                 

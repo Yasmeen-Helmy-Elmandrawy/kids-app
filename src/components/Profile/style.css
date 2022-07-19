@@ -372,18 +372,18 @@
 /* Explain basics */
 .explain-basic .explain .definition-basic{
     display: flex;
-    margin-top: 5px;
+    margin-top: 3px;
     margin-left: 15px;
 }
 .explain-basic .explain .definition-basic .img-basic{
     width: 80px;
     height: 80px;
-    margin-top: 10px;
+    margin-top: 5px;
     border-radius: 10px;
 }
 .explain-basic .explain .definition-basic .para-basic{
     line-height: 1.5;
-    margin-top: 18px;
+    margin-top: 15px;
     font-size: 20px;
     padding-left: 15px;
     color: #333;
@@ -391,12 +391,12 @@
 .explain-basic .explain .h2-basic{
     color: rgb(8, 30, 102);
     margin-left: 30px;
-    padding-top: 10px;
+    padding-top: 5px;
     text-align: center;
 }
 .explain-basic .explain .h3-basic{
-    margin-top: 10px;
-    margin-bottom: 10px;
+    margin-top: 5px;
+    margin-bottom: 5px;
     margin-left: 30px;
     font-size: 22px;
     color: #fff;
@@ -821,12 +821,30 @@
 }
 .sections .rate h2{
     text-align: center;
-    padding-top: 25px;
+    padding-top: 30px;
     font-size: 40px;
     font-weight: bold;
     color: #fff;
+    margin-bottom: 140px;
 }
-.sections .rate h4{
+.sections .rate input[type="radio"]{
+    display : none;
+}
+.sections .rate .five-star{
+    display: inline-block;
+    margin-left: 200px;
+}
+.sections .rate .star{
+    cursor: pointer;
+    transition: color 200ms;
+}
+.sections .rate .rating{
+    font-size: 20px;
+    margin-top: 40px;
+    color: #000;
+    text-align: center;
+}
+/*.sections .rate h4{
     padding-top: 50px;
     padding-bottom: 20px;
     text-align: center;
@@ -874,4 +892,4 @@ circle{
     100%{
         stroke-dashoffset: 245.1;
     }
-}
+}*/

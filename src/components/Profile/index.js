@@ -468,7 +468,7 @@ const Profile = () => {
                         <h2>About Us</h2>
                         <div className="users">
                             <div className="user">
-                                <img src="./images/yasmeen8.jpg" alt="user1-img" />
+                                <img src="./images/yasmeen.jpg" alt="user1-img" />
                                 <h3>yasmeen helmy<br /><span>(FrontEnd Developer)</span></h3>
                             </div>
                             <div className="user">

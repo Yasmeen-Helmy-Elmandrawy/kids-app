@@ -18,7 +18,27 @@ const SignUp = () => {
         setPasswordEye(!passwordEye)
     }
 
+    const [name, setName] = useState('');
+    const [age, setAge] = useState('');
+    const [email, setEmail] = useState('');
+    const [password, setPassword] = useState('');
     const history = useHistory();
+    const handleSignup = async () => {
+        let data = await fetch("https://kidcoder.herokuapp.com/signUp",{
+            method:'POST',
+            body: JSON.stringify({name, age, email, password}),
+            headers: {
+                ACCESS_TOKEN_SECRET: 
+                    "0f5cce9faab589e2e5819c498262907ed7a9729953eee56e0d32645693c2d4df0a61314b7d2f1fe354827e4c8b1984b19bb1c7fd8558e67aa2b2a74353b59ef0",
+                    'Content-Type': 'application/json',
+            },   
+        })
+        data = await data.json();
+        console.log(data);
+    }
+    handleSignup();
+    
+
     const handleClick = () =>{
         const name = document.getElementById("input1").value;
         const age = document.getElementById("input2").value;
@@ -42,36 +62,61 @@ const SignUp = () => {
             <img className="mascot-doc" src="./images/mascot-doc.png" alt="mascot-doc" />
             <form className="input-group signup" onSubmit={handleSubmit(onSubmit)}>
                 <label className="label">{t('name')}</label>
-                <input type="text" className="input-field"
-                placeholder={t('enter-name')} id="input1" required/>
+                <input 
+                    type="text"
+                    className="input-field"
+                    placeholder={t('enter-name')}
+                    onChange={(e) => setName(e.target.value)}
+                    value={name}
+                    id="input1"
+                    required
+                />
                 <label className="label">{t('age')}</label>
-                <input type="text" className="input-field"
-                placeholder={t('enter-age')}
-                {...register("age", {
-                    reqired: "Age is required",
-                    min: {
-                        value: 9,
-                        message: "Minimum required age is 9" 
-                    },
-                    max: {
-                        value: 13,
-                        message: "Maximum required age is 13"
-                    },
-                    pattern: {
-                        value: /^[0-9]*$/,
-                        message: "Only numbers are allowed"
-                    }
-                })} id="input2" />
+                <input
+                    type="text"
+                    className="input-field"
+                    placeholder={t('enter-age')}
+                    {...register("age", {
+                        reqired: "Age is required",
+                        min: {
+                            value: 9,
+                            message: "Minimum required age is 9" 
+                        },
+                        max: {
+                            value: 13,
+                            message: "Maximum required age is 13"
+                        },
+                        pattern: {
+                            value: /^[0-9]*$/,
+                            message: "Only numbers are allowed"
+                        }
+                    })}
+                    onChange={(e) => setAge(e.target.value)}
+                    value={age}
+                    id="input2" />
                 <div className='error'>
                     {errors.age && (<small>{errors.age.message}</small>)}
                 </div><br />
                 <label className="label">{t('email')}</label>
-                <input type="email" className="input-field"
-                placeholder={t('enter-email')} id="input3" required />
+                <input
+                    type="email"
+                    className="input-field"
+                    placeholder={t('enter-email')}
+                    onChange={(e) => setEmail(e.target.value)}
+                    value={email}
+                    id="input3"
+                    required
+                />
                 <label className="label">{t('your-password')}</label>
-                <input type={passwordEye === false ? "password": "text"}
-                className="input-field"
-                placeholder={t('enter-password')} id="input4" required />
+                <input
+                    type={passwordEye === false ? "password": "text"}
+                    className="input-field"
+                    placeholder={t('enter-password')}
+                    onChange={(e) => setPassword(e.target.value)}
+                    value={password}
+                    id="input4"
+                    required
+                />
                 <div className="icon-eye">
                     {
                         (passwordEye === false)?<AiFillEyeInvisible onClick={handlePasswordClick} />:

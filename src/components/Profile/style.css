@@ -18,6 +18,12 @@
     flex-flow: column;
     text-align: center;
 }
+.profile .header img{
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    margin-bottom: 10px;
+}
 .profile .header .name{
     text-transform: uppercase;
     color: white;

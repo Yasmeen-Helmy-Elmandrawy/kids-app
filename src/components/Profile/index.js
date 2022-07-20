@@ -15,6 +15,7 @@ const Profile = () => {
     return ( 
         <div className="profile">
             <div className="header">
+                <img src="./images/logo.jpeg" alt="logo" />
                 <h2 className="name">Kidcoder</h2>
                 <nav className="navbar">
                     <ul>
@@ -498,7 +499,7 @@ const Profile = () => {
                         {[...Array(5)].map((star, i) => {
                             const ratingValue = i + 1;
                             return (
-                                <label>
+                                <label key={ratingValue}>
                                     <input
                                         type="radio"
                                         name="rating"
